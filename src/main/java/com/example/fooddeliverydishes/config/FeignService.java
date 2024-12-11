@@ -10,7 +10,7 @@ import com.example.fooddeliverydishes.model.Restaurant;
 
 
 
-@FeignClient(name="FOODDELIVERYRESTAURANTS", url= "http://localhost:8082/api/restaurants")
+@FeignClient(name="FOODDELIVERYRESTAURANTS", url= "http://ec2-35-171-160-2.compute-1.amazonaws.com:8082/api/restaurants")
 public interface FeignService {
 	@GetMapping("/fetchRestaurantId")
 	ResponseEntity<Integer> getRestaurantIdByName(@RequestParam String restaurantName) ;
